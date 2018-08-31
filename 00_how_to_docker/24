@@ -1,0 +1,1 @@
+docker service create --name orbital-command --network overmind --env R_USER=harbinger --env R_PASSWORD=starcraft rabbitmq
