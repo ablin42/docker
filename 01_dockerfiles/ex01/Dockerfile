@@ -5,3 +5,10 @@
 ##sources when it builds, they cannot be in your repository.
 
 FROM debian:latest
+
+EXPOSE 9987/udp 30033 10011
+
+RUN apt-get update -y && apt-get upgrade -y && apt-get install wget -y && \
+wget http://dl.4players.de/ts/releases/3.0.11.1/teamspeak3-server_linux-amd64-3.0.11.1.tar.gz && tar xvfz teamspeak3-server_linux-amd64-3.0.11.1.tar.gz
+
+CMD ["sh", "teamspeak3-server_linux-amd64/ts3server_minimal_runscript.sh"]
