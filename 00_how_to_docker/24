@@ -1,4 +1,4 @@
 ##Launch a rabbitmq SERVICE that will be named orbital-command. You should
 ##define a specific user and password for the RabbitMQ service, they can be whatever
 ##you want. This service will be on the overmind network.
-docker service create --name orbital-command --network overmind --env OC_USERNAME=harbinger --env OC_PASSWD=starcraft rabbitmq
+docker service create --name orbital-command --network overmind --env RABBITMQ_DEFAULT_USER=harbinger --env RABBITMQ_DEFAULT_PASS=admin rabbitmq
